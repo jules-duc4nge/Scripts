@@ -1,4 +1,4 @@
-import "lib/bellman", csv
+import bellman, csv
 
 while(True):
     cmd = input().split(" ")
@@ -18,7 +18,7 @@ while(True):
             elif(cmd[2]=="bellman_max"):
                 results = bellman.bellman_max(matrix, int(cmd[3]))
             elif(cmd[2]=="bellman_ford_kalaba"):
-                results = bellman.solve graphebellman_ford_kalaba(matrix, int(cmd[3]))
+                results = bellman.bellman_ford_kalaba(matrix, int(cmd[3]))
         print("Results : {}".format(results))
     elif(cmd[0]=="exit"):
         break
